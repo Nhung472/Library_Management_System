@@ -50,5 +50,10 @@ namespace Library_Management_System
             vsi.Show();
         }
 
+        private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueBooks ib = new IssueBooks();
+            ib.Show();
+        }
     }
 }
