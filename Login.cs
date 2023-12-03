@@ -93,5 +93,10 @@ namespace Library_Management_System
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+        }
     }
 }
