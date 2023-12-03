@@ -37,5 +37,11 @@ namespace Library_Management_System
             vb.Show();
 
         }
+
+        private void addStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudent ast = new AddStudent();
+            ast.Show();
+        }
     }
 }
