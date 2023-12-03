@@ -23,11 +23,8 @@ namespace Library_Management_System
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -83,7 +80,7 @@ namespace Library_Management_System
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
-            
+
             if (ds.Tables[0].Rows.Count != 0)
             {
                 this.Hide();

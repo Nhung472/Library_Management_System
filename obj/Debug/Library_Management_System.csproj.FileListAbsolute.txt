@@ -16,3 +16,4 @@ D:\study\I_2023_2024\Ky_thuat_lap_trinh\final\Library_Management_System\Library_
 D:\study\I_2023_2024\Ky_thuat_lap_trinh\final\Library_Management_System\Library_Management_System\obj\Debug\Library_Management_System.IssueBooks.resources
 D:\study\I_2023_2024\Ky_thuat_lap_trinh\final\Library_Management_System\Library_Management_System\obj\Debug\Library_Management_System.ReturnBook.resources
 D:\study\I_2023_2024\Ky_thuat_lap_trinh\final\Library_Management_System\Library_Management_System\obj\Debug\Library_Management_System.CompleteBookDetails.resources
+D:\study\I_2023_2024\Ky_thuat_lap_trinh\final\Library_Management_System\Library_Management_System\obj\Debug\Library_Management_System.SignUp.resources
