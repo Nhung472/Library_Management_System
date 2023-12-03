@@ -140,6 +140,7 @@
             this.returnBookToolStripMenuItem.Name = "returnBookToolStripMenuItem";
             this.returnBookToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
             this.returnBookToolStripMenuItem.Text = "Return Book";
+            this.returnBookToolStripMenuItem.Click += new System.EventHandler(this.returnBookToolStripMenuItem_Click);
             // 
             // completeBookDetailsToolStripMenuItem
             // 
@@ -149,6 +150,7 @@
             this.completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
             this.completeBookDetailsToolStripMenuItem.Size = new System.Drawing.Size(292, 54);
             this.completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
+            this.completeBookDetailsToolStripMenuItem.Click += new System.EventHandler(this.completeBookDetailsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

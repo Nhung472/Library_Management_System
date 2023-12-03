@@ -118,6 +118,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnRefresh
             // 
@@ -129,6 +130,7 @@
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSearch
             // 
@@ -150,6 +152,7 @@
             this.txtEnrollment.Name = "txtEnrollment";
             this.txtEnrollment.Size = new System.Drawing.Size(203, 23);
             this.txtEnrollment.TabIndex = 2;
+            this.txtEnrollment.TextChanged += new System.EventHandler(this.txtEnrollment_TextChanged);
             // 
             // label2
             // 
@@ -233,7 +236,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(323, 19);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Maximum 3 Books Can be ISSUED to  1 Student";
+            this.label10.Text = "Maximum 5 Books Can be ISSUED to  1 Student";
             // 
             // label9
             // 

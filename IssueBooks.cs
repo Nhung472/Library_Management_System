@@ -89,7 +89,7 @@ namespace Library_Management_System
         {
             if(txtName.Text !="")
             {
-                if (comboBoxBook.SelectedIndex != -1 && count <= 2)
+                if (comboBoxBook.SelectedIndex != -1 && count <= 5)
                 {
                     String enroll = txtEnrollment.Text;
                     String sname = txtName.Text;
@@ -115,8 +115,34 @@ namespace Library_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Select Book. Or Maximum number of Book has been ISSUED", "No Book ISSUED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Select Book. Or Maximum number of Book has been ISSUED", "No Book ISSUED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void txtEnrollment_TextChanged(object sender, EventArgs e)
+        {
+            if(txtEnrollment.Text == "")
+            {
+                txtName.Clear();
+                txtEmail.Clear();
+                txtContact.Clear();
+                txtDepartment.Clear();
+                txtSemester.Clear();
+
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            txtEnrollment.Clear();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)==DialogResult.OK)
+            {
+                this.Close();
             }
         }
     }
