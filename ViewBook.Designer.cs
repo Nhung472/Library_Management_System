@@ -123,6 +123,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 143);
             this.dataGridView1.Name = "dataGridView1";
@@ -134,7 +135,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnUpdate);
@@ -152,14 +153,14 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(12, 342);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1037, 204);
+            this.panel2.Size = new System.Drawing.Size(1037, 216);
             this.panel2.TabIndex = 2;
             // 
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(883, 164);
+            this.btnCancel.Location = new System.Drawing.Point(657, 164);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(128, 30);
             this.btnCancel.TabIndex = 17;
@@ -171,7 +172,7 @@
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(704, 164);
+            this.btnDelete.Location = new System.Drawing.Point(475, 164);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(128, 30);
             this.btnDelete.TabIndex = 16;
@@ -183,7 +184,7 @@
             // 
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(506, 164);
+            this.btnUpdate.Location = new System.Drawing.Point(304, 164);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(128, 30);
             this.btnUpdate.TabIndex = 5;
@@ -193,50 +194,56 @@
             // 
             // txtQuantity
             // 
+            this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(704, 111);
+            this.txtQuantity.Location = new System.Drawing.Point(704, 118);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(307, 30);
+            this.txtQuantity.Size = new System.Drawing.Size(307, 23);
             this.txtQuantity.TabIndex = 15;
             // 
             // txtPrice
             // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(704, 64);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(307, 30);
+            this.txtPrice.Size = new System.Drawing.Size(307, 23);
             this.txtPrice.TabIndex = 14;
             // 
             // txtPDate
             // 
+            this.txtPDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPDate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPDate.Location = new System.Drawing.Point(704, 13);
             this.txtPDate.Name = "txtPDate";
-            this.txtPDate.Size = new System.Drawing.Size(307, 30);
+            this.txtPDate.Size = new System.Drawing.Size(307, 23);
             this.txtPDate.TabIndex = 13;
             // 
             // txtPublication
             // 
+            this.txtPublication.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPublication.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublication.Location = new System.Drawing.Point(212, 111);
+            this.txtPublication.Location = new System.Drawing.Point(212, 118);
             this.txtPublication.Name = "txtPublication";
-            this.txtPublication.Size = new System.Drawing.Size(284, 30);
+            this.txtPublication.Size = new System.Drawing.Size(284, 23);
             this.txtPublication.TabIndex = 12;
             // 
             // txtAuthor
             // 
+            this.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAuthor.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.Location = new System.Drawing.Point(212, 64);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(284, 30);
+            this.txtAuthor.Size = new System.Drawing.Size(284, 23);
             this.txtAuthor.TabIndex = 11;
             // 
             // txtBName
             // 
+            this.txtBName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBName.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBName.Location = new System.Drawing.Point(212, 3);
+            this.txtBName.Location = new System.Drawing.Point(212, 20);
             this.txtBName.Name = "txtBName";
-            this.txtBName.Size = new System.Drawing.Size(284, 30);
+            this.txtBName.Size = new System.Drawing.Size(284, 23);
             this.txtBName.TabIndex = 5;
             // 
             // label8
@@ -304,7 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.DarkSalmon;
+            this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1062, 570);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
