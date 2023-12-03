@@ -114,7 +114,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(122, 290);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(90, 29);
+            this.btnExit.Size = new System.Drawing.Size(96, 29);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(15, 291);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(90, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(101, 29);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             // 
             this.txtEnrollment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEnrollment.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnrollment.Location = new System.Drawing.Point(29, 183);
+            this.txtEnrollment.Location = new System.Drawing.Point(15, 183);
             this.txtEnrollment.Name = "txtEnrollment";
-            this.txtEnrollment.Size = new System.Drawing.Size(183, 23);
+            this.txtEnrollment.Size = new System.Drawing.Size(203, 23);
             this.txtEnrollment.TabIndex = 2;
             // 
             // label2
@@ -233,7 +233,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(323, 19);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Maximum 5 Books Can be ISSUED to  1 Student";
+            this.label10.Text = "Maximum 3 Books Can be ISSUED to  1 Student";
             // 
             // label9
             // 

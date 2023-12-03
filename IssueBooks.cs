@@ -41,6 +41,7 @@ namespace Library_Management_System
 
         }
 
+        int count;
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if(txtEnrollment.Text !="")
@@ -55,6 +56,14 @@ namespace Library_Management_System
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
                 DA.Fill(DS);
+
+                //count how many book that the student had issued
+                cmd.CommandText = "SELECT count(std_enroll) FROM IRBook WHERE std_enroll = '" + eid + "' AND book_return_date IS NULL ";
+                SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
+                DataSet DS1 = new DataSet();
+                DA1.Fill(DS1);
+
+                count = int.Parse(DS1.Tables[0].Rows[0][0].ToString());
 
                 if (DS.Tables[0].Rows.Count != 0)
                 {
@@ -78,7 +87,37 @@ namespace Library_Management_System
 
         private void btnIssueBook_Click(object sender, EventArgs e)
         {
+            if(txtName.Text !="")
+            {
+                if (comboBoxBook.SelectedIndex != -1 && count <= 2)
+                {
+                    String enroll = txtEnrollment.Text;
+                    String sname = txtName.Text;
+                    String sdep = txtDepartment.Text;
+                    String sem = txtSemester.Text;
+                    Int64 contact = Int64.Parse(txtContact.Text);
+                    String email = txtEmail.Text;
+                    String bookname = comboBoxBook.Text;
+                    String bookIssueDate = dateTimePicker.Text;
 
+                    String eid = txtEnrollment.Text;
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True";
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
+
+                    con.Open();
+                    cmd.CommandText = "INSERT INTO IRBook(std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) VALUES ('" + enroll + "', '" + sname + "', '" + sdep + "', '" + sem + "', " + contact + ", '" + email + "', '" + bookname + "', '" + bookIssueDate + "') ";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    MessageBox.Show("Book Issued.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Select Book. Or Maximum number of Book has been ISSUED", "No Book ISSUED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
