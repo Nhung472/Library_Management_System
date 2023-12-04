@@ -85,7 +85,6 @@ namespace Library_Management_System
             }
         }
 
-        Int64 countBook;
         private void btnIssueBook_Click(object sender, EventArgs e)
         {
             if(txtName.Text !="")

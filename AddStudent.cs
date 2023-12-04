@@ -35,7 +35,6 @@ namespace Library_Management_System
             txtDepartment.Clear();
             txtSemester.Clear();
             txtContact.Clear();
-            //txtEmail.Clear();
 
             txtEmail.Text = "";
         }
@@ -48,26 +47,49 @@ namespace Library_Management_System
                 String enroll = txtEnrollment.Text;
                 String dep = txtDepartment.Text;
                 String sem = txtSemester.Text;
-                Int64 moblie = Int64.Parse(txtContact.Text);
+                Int64 mobile = Int64.Parse(txtContact.Text);
                 String email = txtEmail.Text;
 
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
+                if (IsEnrollmentNumberUnique(enroll))
+                {
+                    SqlConnection con = new SqlConnection();
+                    con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = con;
 
-                con.Open();
-                cmd.CommandText = "INSERT INTO NewStudent (sname, enroll, dep, sem, contact, email) values ('" + name + "', '" + enroll + "', '" + dep + "', '" + sem + "', '" + moblie + "', '" + email + "')";
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Open();
+                    cmd.CommandText = "INSERT INTO NewStudent (sname, enroll, dep, sem, contact, email) VALUES ('" + name + "', '" + enroll + "', '" + dep + "', '" + sem + "', '" + mobile + "', '" + email + "')";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Enrollment number already exists. Please use a different enrollment number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 MessageBox.Show("Please Fill Empty Field!", "Suggest", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private bool IsEnrollmentNumberUnique(string enrollmentNumber)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            con.Open();
+            cmd.CommandText = "SELECT COUNT(*) FROM NewStudent WHERE enroll = '" + enrollmentNumber + "'";
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+
+            return count == 0;
+        }
+
 
     }
 }
