@@ -149,5 +149,13 @@ namespace Library_Management_System
                 da.Fill(ds);
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Confirm?", "Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFacebook = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInstagram = new System.Windows.Forms.PictureBox();
+            this.pictureBoxYoutube = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFacebook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYoutube)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnClear
+            // btnSignUp
             // 
-            this.btnClear.BackColor = System.Drawing.Color.White;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnClear.Location = new System.Drawing.Point(28, 340);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(252, 35);
-            this.btnClear.TabIndex = 24;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnSignUp.BackColor = System.Drawing.Color.White;
+            this.btnSignUp.FlatAppearance.BorderSize = 0;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnSignUp.Location = new System.Drawing.Point(28, 340);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(252, 35);
+            this.btnSignUp.TabIndex = 24;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnLogin
             // 
@@ -91,6 +91,7 @@
             this.txtPassword.Size = new System.Drawing.Size(233, 27);
             this.txtPassword.TabIndex = 19;
             this.txtPassword.Text = "Password";
+            this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             // 
             // txtUsername
             // 
@@ -102,6 +103,8 @@
             this.txtUsername.Size = new System.Drawing.Size(233, 27);
             this.txtUsername.TabIndex = 17;
             this.txtUsername.Text = "Username";
+            this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
+            this.txtUsername.MouseEnter += new System.EventHandler(this.txtUsername_MouseEnter);
             // 
             // pictureBox1
             // 
@@ -120,18 +123,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 14;
-            // 
-            // btnExit
-            // 
-            this.btnExit.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(261, -5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(44, 48);
-            this.btnExit.TabIndex = 27;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -169,35 +160,48 @@
             this.panel2.Size = new System.Drawing.Size(200, 1);
             this.panel2.TabIndex = 31;
             // 
-            // pictureBox4
+            // pictureBoxFacebook
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(136, 409);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(52, 47);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxFacebook.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFacebook.Image")));
+            this.pictureBoxFacebook.Location = new System.Drawing.Point(136, 409);
+            this.pictureBoxFacebook.Name = "pictureBoxFacebook";
+            this.pictureBoxFacebook.Size = new System.Drawing.Size(52, 47);
+            this.pictureBoxFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFacebook.TabIndex = 32;
+            this.pictureBoxFacebook.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBoxInstagram
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(44, 409);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(52, 47);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 33;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxInstagram.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInstagram.Image")));
+            this.pictureBoxInstagram.Location = new System.Drawing.Point(44, 409);
+            this.pictureBoxInstagram.Name = "pictureBoxInstagram";
+            this.pictureBoxInstagram.Size = new System.Drawing.Size(52, 47);
+            this.pictureBoxInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInstagram.TabIndex = 33;
+            this.pictureBoxInstagram.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxYoutube
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(228, 409);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(52, 47);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 34;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxYoutube.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxYoutube.Image")));
+            this.pictureBoxYoutube.Location = new System.Drawing.Point(228, 409);
+            this.pictureBoxYoutube.Name = "pictureBoxYoutube";
+            this.pictureBoxYoutube.Size = new System.Drawing.Size(52, 47);
+            this.pictureBoxYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxYoutube.TabIndex = 34;
+            this.pictureBoxYoutube.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.Location = new System.Drawing.Point(256, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(55, 51);
+            this.btnClose.TabIndex = 35;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Login
             // 
@@ -205,15 +209,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(304, 479);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.pictureBoxYoutube);
+            this.Controls.Add(this.pictureBoxInstagram);
+            this.Controls.Add(this.pictureBoxFacebook);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -226,28 +230,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFacebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInstagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxYoutube)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBoxFacebook;
+        private System.Windows.Forms.PictureBox pictureBoxInstagram;
+        private System.Windows.Forms.PictureBox pictureBoxYoutube;
+        private System.Windows.Forms.Button btnClose;
     }
 }

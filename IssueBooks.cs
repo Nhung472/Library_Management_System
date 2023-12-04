@@ -85,11 +85,12 @@ namespace Library_Management_System
             }
         }
 
+        Int64 countBook;
         private void btnIssueBook_Click(object sender, EventArgs e)
         {
             if(txtName.Text !="")
             {
-                if (comboBoxBook.SelectedIndex != -1 && count <= 5)
+                if (comboBoxBook.SelectedIndex != -1 && count <=5)
                 {
                     String enroll = txtEnrollment.Text;
                     String sname = txtName.Text;
@@ -110,12 +111,11 @@ namespace Library_Management_System
                     cmd.CommandText = "INSERT INTO IRBook(std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) VALUES ('" + enroll + "', '" + sname + "', '" + sdep + "', '" + sem + "', " + contact + ", '" + email + "', '" + bookname + "', '" + bookIssueDate + "') ";
                     cmd.ExecuteNonQuery();
                     con.Close();
-
                     MessageBox.Show("Book Issued.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Select Book. Or Maximum number of Book has been ISSUED", "No Book ISSUED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The MAXIMUM of the book that has been ISSUED is 5. Please Return a book to continue", "No Book SELECTED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

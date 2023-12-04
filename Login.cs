@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Library_Management_System
 {
@@ -24,7 +25,7 @@ namespace Library_Management_System
         }
 
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -93,10 +94,29 @@ namespace Library_Management_System
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
-            txtUsername.Clear();
-            txtPassword.Clear();
+            if (txtUsername.Text != "" && txtPassword.Text != "")
+            {
+                String username = txtUsername.Text;
+                String pass = txtPassword.Text;
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                con.Open();
+                cmd.CommandText = "INSERT INTO loginTable (username, pass) values ('"+username+"', '"+pass+"')";
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Sign Up Successfully! You can Login now.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password. Try Again", "Suggest", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

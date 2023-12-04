@@ -39,5 +39,13 @@ namespace Library_Management_System
 
             dataGridView2.DataSource = ds1.Tables[0];
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you want to exit?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

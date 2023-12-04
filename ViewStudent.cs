@@ -166,5 +166,13 @@ namespace Library_Management_System
                 this.Close();
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Unsaved data will be LOST.", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

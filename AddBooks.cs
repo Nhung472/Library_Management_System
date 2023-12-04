@@ -55,7 +55,7 @@ namespace Library_Management_System
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("This will DELETE your unsaved data", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK);
+            if(MessageBox.Show("This will DELETE your unsaved data", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 this.Close();
             }

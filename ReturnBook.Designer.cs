@@ -38,14 +38,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtBookIssueDate = new System.Windows.Forms.TextBox();
+            this.txtBookName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBookName = new System.Windows.Forms.TextBox();
-            this.txtBookIssueDate = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnReturn = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -160,6 +160,56 @@
             this.panel2.Size = new System.Drawing.Size(705, 127);
             this.panel2.TabIndex = 2;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.LightCoral;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Location = new System.Drawing.Point(577, 65);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(102, 34);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
+            this.btnReturn.Location = new System.Drawing.Point(577, 10);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(102, 34);
+            this.btnReturn.TabIndex = 6;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(249, 77);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(284, 22);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // txtBookIssueDate
+            // 
+            this.txtBookIssueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBookIssueDate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookIssueDate.Location = new System.Drawing.Point(249, 41);
+            this.txtBookIssueDate.Name = "txtBookIssueDate";
+            this.txtBookIssueDate.Size = new System.Drawing.Size(284, 23);
+            this.txtBookIssueDate.TabIndex = 4;
+            // 
+            // txtBookName
+            // 
+            this.txtBookName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBookName.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookName.Location = new System.Drawing.Point(249, 8);
+            this.txtBookName.Name = "txtBookName";
+            this.txtBookName.Size = new System.Drawing.Size(284, 23);
+            this.txtBookName.TabIndex = 3;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -190,56 +240,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Book Name";
             // 
-            // txtBookName
-            // 
-            this.txtBookName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBookName.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookName.Location = new System.Drawing.Point(249, 8);
-            this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(284, 23);
-            this.txtBookName.TabIndex = 3;
-            // 
-            // txtBookIssueDate
-            // 
-            this.txtBookIssueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBookIssueDate.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookIssueDate.Location = new System.Drawing.Point(249, 41);
-            this.txtBookIssueDate.Name = "txtBookIssueDate";
-            this.txtBookIssueDate.Size = new System.Drawing.Size(284, 23);
-            this.txtBookIssueDate.TabIndex = 4;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(249, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(284, 22);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.btnReturn.Location = new System.Drawing.Point(577, 10);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(102, 34);
-            this.btnReturn.TabIndex = 6;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.LightCoral;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(577, 65);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(102, 34);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // ReturnBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,6 +250,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReturnBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnBook";
