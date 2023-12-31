@@ -118,21 +118,17 @@ namespace Library_Management_System
                 Int64 contact = Int64.Parse(txtContact.Text);
                 String email = txtEmail.Text;
 
-                if (MessageBox.Show("Data will be UPDATE. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                {
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True ";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
 
-                    cmd.CommandText = "UPDATE NewStudent SET sname = '" + sname + "', enroll = '" + enroll + "', dep = '" + dep + "', sem = '" + sem + "', contact = " + contact + ", email = '" + email + "' WHERE stuid=" + rowid + "  ";
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
+                cmd.CommandText = "UPDATE NewStudent SET sname = '" + sname + "', enroll = '" + enroll + "', dep = '" + dep + "', sem = '" + sem + "', contact = " + contact + ", email = '" + email + "' WHERE stuid=" + rowid + "  ";
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
 
-                    ViewStudent_Load(this, null);
-                }
-
+                ViewStudent_Load(this, null);
             }
         }
 

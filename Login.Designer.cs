@@ -169,6 +169,7 @@
             this.pictureBoxFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFacebook.TabIndex = 32;
             this.pictureBoxFacebook.TabStop = false;
+            this.pictureBoxFacebook.Click += new System.EventHandler(this.pictureBoxFacebook_Click);
             // 
             // pictureBoxInstagram
             // 
@@ -179,6 +180,7 @@
             this.pictureBoxInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInstagram.TabIndex = 33;
             this.pictureBoxInstagram.TabStop = false;
+            this.pictureBoxInstagram.Click += new System.EventHandler(this.pictureBoxInstagram_Click);
             // 
             // pictureBoxYoutube
             // 
@@ -189,6 +191,7 @@
             this.pictureBoxYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxYoutube.TabIndex = 34;
             this.pictureBoxYoutube.TabStop = false;
+            this.pictureBoxYoutube.Click += new System.EventHandler(this.pictureBoxYoutube_Click);
             // 
             // btnClose
             // 

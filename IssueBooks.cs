@@ -26,7 +26,7 @@ namespace Library_Management_System
             cmd.Connection = con;
             con.Open();
 
-            cmd = new SqlCommand("Select bName from NewBook", con);
+            cmd = new SqlCommand("Select book_name from NewBook", con);
             SqlDataReader Sdr = cmd.ExecuteReader();
 
             while (Sdr.Read ()) 
@@ -87,26 +87,29 @@ namespace Library_Management_System
 
         private void btnIssueBook_Click(object sender, EventArgs e)
         {
-            if(txtName.Text !="")
+            if (txtName.Text != "")
             {
-                if (comboBoxBook.SelectedIndex != -1 && count <=5)
+                String enroll = txtEnrollment.Text;
+                String sname = txtName.Text;
+                String sdep = txtDepartment.Text;
+                String sem = txtSemester.Text;
+                Int64 contact = Int64.Parse(txtContact.Text);
+                String email = txtEmail.Text;
+                String bookname = comboBoxBook.Text;
+                String bookIssueDate = dateTimePicker.Text;
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                con.Open();
+
+                cmd.CommandText = "SELECT COUNT(std_enroll) FROM IRBook WHERE std_enroll = '" + enroll + "' AND book_return_date IS NULL";
+                int currentIssuedBooks = (int)cmd.ExecuteScalar();
+
+                if (comboBoxBook.SelectedIndex != -1 && currentIssuedBooks < 5)
                 {
-                    String enroll = txtEnrollment.Text;
-                    String sname = txtName.Text;
-                    String sdep = txtDepartment.Text;
-                    String sem = txtSemester.Text;
-                    Int64 contact = Int64.Parse(txtContact.Text);
-                    String email = txtEmail.Text;
-                    String bookname = comboBoxBook.Text;
-                    String bookIssueDate = dateTimePicker.Text;
-
-                    String eid = txtEnrollment.Text;
-                    SqlConnection con = new SqlConnection();
-                    con.ConnectionString = "data source = NHUNG ; database = library; integrated security=True";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-
-                    con.Open();
                     cmd.CommandText = "INSERT INTO IRBook(std_enroll, std_name, std_dep, std_sem, std_contact, std_email, book_name, book_issue_date) VALUES ('" + enroll + "', '" + sname + "', '" + sdep + "', '" + sem + "', " + contact + ", '" + email + "', '" + bookname + "', '" + bookIssueDate + "') ";
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -114,10 +117,11 @@ namespace Library_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("The MAXIMUM of the book that has been ISSUED is 5. Please Return a book to continue", "No Book SELECTED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The MAXIMUM number of books that can be ISSUED is 5. Please Return a book to continue", "No Book SELECTED", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+
 
         private void txtEnrollment_TextChanged(object sender, EventArgs e)
         {

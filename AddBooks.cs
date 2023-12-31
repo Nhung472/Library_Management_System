@@ -35,7 +35,7 @@ namespace Library_Management_System
                 cmd.Connection = con;
 
                 con.Open();
-                cmd.CommandText = "INSERT INTO NewBook (bName, bAuthor, bPubl, bPDate, bPrice, bQuan) values ('" + bname + "', '" + bauthor + "', '" + publication + "', '" + pdate + "', '" + price + "', '" + quan + "' )";
+                cmd.CommandText = "INSERT INTO NewBook (book_name, book_author, book_publ, book_publ_date, book_price, book_quantity) values ('" + bname + "', '" + bauthor + "', '" + publication + "', '" + pdate + "', '" + price + "', '" + quan + "' )";
                 cmd.ExecuteNonQuery();
                 con.Close();
 

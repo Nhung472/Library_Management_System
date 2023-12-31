@@ -50,7 +50,7 @@ namespace Library_Management_System
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "SELECT * FROM NewBook WHERE bid = "+bid+"";
+            cmd.CommandText = "SELECT * FROM NewBook WHERE book_id = "+bid+"";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -80,7 +80,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "SELECT * FROM NewBook WHERE bName LIKE '"+txtBookName.Text+"%'";
+                cmd.CommandText = "SELECT * FROM NewBook WHERE book_name LIKE '"+txtBookName.Text+"%'";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -125,7 +125,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "UPDATE NewBook SET bName = '"+bname+"', bAuthor = '"+bauthor+"', bPubl = '"+publication+"', bPDate = '"+pdate + "', bPrice = "+price+", bQuan = "+quan+" WHERE bid=" + rowid + "  ";
+                cmd.CommandText = "UPDATE NewBook SET book_name = '"+bname+"', book_author = '"+bauthor+"', book_publ = '"+publication+"', book_publ_date = '"+pdate + "', book_price = "+price+", book_quantity = "+quan+" WHERE book_id=" + rowid + "  ";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -143,7 +143,7 @@ namespace Library_Management_System
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "DELETE FROM NewBook WHERE bid="+rowid+"";
+                cmd.CommandText = "DELETE FROM NewBook WHERE book_id="+rowid+"";
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
